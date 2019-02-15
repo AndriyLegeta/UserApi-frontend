@@ -1,0 +1,26 @@
+<br>
+<button
+  *ngIf="isTrue; else userslist"
+  (click)="changeTrue()">
+  Users
+</button>
+
+<ng-template #userslist>
+  <button (click)="changeTrue()">Back</button>
+<h3>Users</h3>
+<ul>
+
+  <li *ngFor="let user of users.allUser, let i = index">
+
+      <!--якщо ставим слеш спочастку то перезапише поточну урлу -/todos ,
+			2) [queryParams]="todo" дані todo йдуть в queryParams
+			-->
+    <h4>User № {{i+1}}:</h4>
+    <p>name:  {{user.name}}, email:  {{user.email}}
+        <button type="submit" (click)="delete(user._id)">x</button>
+    </p>
+
+  </li>
+
+</ul>
+</ng-template>

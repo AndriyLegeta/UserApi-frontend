@@ -1,0 +1,32 @@
+<button
+  *ngIf="isRegister; else formRegister"
+  (click)="changeRegister()">
+  Register
+</button>
+<ng-template #formRegister>
+  <button (click)="changeRegister()">Back</button>
+  <form #form='ngForm' method="post">
+    <label>Name
+      <input [(ngModel)]="user.name" type="text"
+             name="name"
+             #nameref='ngModel'
+             required>
+    </label>
+    <br>
+    <label>Email
+      <input [(ngModel)]="user.email" type="text" name="email" email>
+    </label>
+    <br>
+    <label>Password
+      <input [(ngModel)]="user.password" type="password" name="password">
+    </label>
+    <br>
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      (click)="submit(user)">
+      Send
+    </button>
+  </form>
+</ng-template>
+<p *ngIf="receivedUser">{{receivedUser.message}}</p>

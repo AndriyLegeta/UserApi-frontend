@@ -1,0 +1,37 @@
+<br>
+<button
+  *ngIf="isLogin; else forms"
+  (click)="changeLogin()">
+  Login
+</button>
+<ng-template #forms>
+  <form #formLogin='ngForm' method="post">
+    <label>
+      Name
+      <input [(ngModel)]="user.name" type="text"
+             name="name"
+             #nameref='ngModel'
+             [ngStyle]="{border: nameref.invalid && nameref.dirty? '1px solid red':'1px solid green'}"
+             required>
+    </label>
+    <br>
+    <label>
+      Password
+      <input [(ngModel)]="user.password" type="password" name="password">
+    </label>
+    <br>
+    <button
+      type="submit"
+      [disabled]="formLogin.invalid"
+      (click)="submit(user)">
+      Send
+    </button>
+  </form>
+</ng-template>
+<p *ngIf="token && !logined">Message:  {{token.message}}</p>
+<p *ngIf="logined">Message: `User is already log in`</p>
+<button
+  (click)="logout()">
+  Logout
+</button>
+
