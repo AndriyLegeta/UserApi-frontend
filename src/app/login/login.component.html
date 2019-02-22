@@ -1,10 +1,10 @@
 <br>
-<button
+<!--<button
   *ngIf="isLogin; else forms"
   (click)="changeLogin()">
   Login
 </button>
-<ng-template #forms>
+<ng-template #forms>-->
   <form #formLogin='ngForm' method="post">
     <label>
       Name
@@ -27,11 +27,23 @@
       Send
     </button>
   </form>
-</ng-template>
+<!--</ng-template>-->
+
 <p *ngIf="token && !logined">Message:  {{token.message}}</p>
-<p *ngIf="logined">Message: `User is already log in`</p>
-<button
-  (click)="logout()">
-  Logout
-</button>
+<div *ngIf="logined">
+  <p >Message: `User is already log in`</p>
+  <button style="background: darkred"
+    (click)="logout()">
+    Logout
+  </button>
+  <div>
+
+    <h2>Users list</h2>
+    <a routerLink="users">SHOW ALL USERS</a>
+  </div>
+
+
+
+</div>
+
 

@@ -1,0 +1,13 @@
+button{
+  margin: 10px;
+  background: green;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 0;
+  color: aliceblue;
+}
+input{
+  margin: 10px;
+  border-radius: 15px;
+}

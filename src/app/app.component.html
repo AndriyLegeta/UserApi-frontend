@@ -1,13 +1,25 @@
-<ul>
-  <li>
-    <a routerLink="/vampire">Vampire</a>
-  </li>
-  <li>
-    <a routerLink="/wizzard">Wizzard</a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
-<app-register></app-register>
-<app-login></app-login>
-<app-users></app-users>
+<div>
+  <a routerLink="/vampire">
+      <div class="btn">
+        Register
+      </div>
+  </a>
+  <a routerLink="/wizzard">
+      <div class="btn">
+        Log in
+      </div>
+  </a>
+</div>
+
+
+<div class="showInfo">
+  <h4>Choose what you want to do!</h4>
+  <p>You can register.</p>
+  <p>If you are registered you can log in.</p>
+  <router-outlet></router-outlet>
+</div>
+
+<!--<app-register></app-register>-->
+
+<!--<app-users></app-users>-->
 

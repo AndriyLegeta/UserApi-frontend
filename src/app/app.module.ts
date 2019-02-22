@@ -5,9 +5,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
-import {UsersComponent} from './users/users.component';
+
+/*import {LoginComponent} from './login/login.component';*/
+/*import {RegisterComponent} from './register/register.component';*/
+/*import {UsersComponent} from './users/users.component';*/
 
 import {IsloginService} from "../services/islogin.service";
 import {JsonService} from "../services/json.service";
@@ -18,9 +19,9 @@ import {MainRoutingModule} from "./main-routing.module";
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    UsersComponent
+   /* LoginComponent,*/
+    /*RegisterComponent,*/
+    /*UsersComponent*/
   ],
   imports: [
     BrowserModule,

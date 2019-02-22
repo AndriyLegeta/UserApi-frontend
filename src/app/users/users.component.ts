@@ -10,9 +10,15 @@ import {User} from '../../models/User';
 })
 export class UsersComponent implements OnInit {
   isTrue: boolean = true;
+  isUpdate: boolean = true;
   users = {};
+  userChanged = {};
 
-
+  formObj = {
+    name:'',
+    email:'',
+    id:'',
+  };
   constructor(private  jsonService: JsonService) {
   }
 
@@ -25,12 +31,8 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  changeTrue() {
-    /*if(localStorage.getItem('token')){*/
-    this.isTrue = !this.isTrue;
-    this.ngOnInit();
-   /* }*/
-
+  changeUpdate() {
+    this.isUpdate = !this.isUpdate;
   }
 
   delete(id) {
@@ -38,4 +40,11 @@ export class UsersComponent implements OnInit {
     this.jsonService.deleteUser(id).subscribe();
     this.ngOnInit();
   }
+  update(body) {
+    console.log(body);
+    this.jsonService.updateUser(body).subscribe((data:{}) => {console.log(data)});
+    this.ngOnInit();
+    this.isUpdate = !this.isUpdate;
+  }
+
 }

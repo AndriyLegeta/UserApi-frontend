@@ -35,7 +35,9 @@ export class JsonService {
   deleteUser(id): Observable<User>{
     return this.http.delete<User>(`${Hosts.API_HOST}/delete/${id}`,{headers: this.headers});
   }
-
+  updateUser(userChanged): Observable<User>{
+    return this.http.put<User>(`${Hosts.API_HOST}/update`, userChanged,{headers: this.headers});
+  }
   loginUser(user): Observable<User>{
     const body = {name: user.name, password: user.password};
     return this.http.post<User>(`${Hosts.API_HOST}/login`, body);

@@ -1,0 +1,54 @@
+h3{
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+.li{
+  background: cadetblue;
+  border-radius: 5px;
+  margin: 5px;
+  min-height: 40px;
+  box-shadow: 2px 2px slateblue ;
+  color: darkmagenta;
+  padding: 8px;
+}
+.span{
+  color: aliceblue;
+}
+.spanHeaders{
+  font-size: 20px;
+  text-decoration: underline;
+}
+ul{
+  padding: 0;
+}
+ul li {
+ list-style: none;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.back{
+  background: slateblue;
+  display: flex;
+  width: 45px;
+}
+.delete {
+  background: red;
+  color: white;
+  float: right;
+  border: 0;
+  margin: -20px 10px;
+  height: 25px;
+  width: 25px;
+}
+.update {
+  background: orange;
+  color: white;
+  float: right;
+  border: 0;
+  margin: -20px 35px;
+  height: 25px;
+}
+
