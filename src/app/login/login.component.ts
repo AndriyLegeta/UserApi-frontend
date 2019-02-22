@@ -14,10 +14,13 @@ export class LoginComponent implements OnInit {
   user = {};
   token;
   logined;
+  /*localStorageToken;*/
   constructor(private http: JsonService, private isLoginService: IsloginService) { }
 
   ngOnInit() {
-
+/*  if(localStorage.getItem('token')){
+      this.localStorageToken = localStorage.getItem('token');
+    }*/
   }
 
 
@@ -37,7 +40,8 @@ export class LoginComponent implements OnInit {
     this.isLoginService.logout();
   }
 
-  changeLogin() {
+
+  changeLogin(){
     this.isLogin = !this.isLogin;
   };
 }

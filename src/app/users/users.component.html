@@ -13,12 +13,24 @@
 			-->
     <div class="li">
 
-
+      <form  #form='ngForm'>
       <p contenteditable="true"> <span class="span spanHeaders">User № {{i+1}}:</span> <br>
-        <span class="span">name:</span>
-        <span *ngIf="isUpdate" class="changeForInput" contenteditable="true">{{user.name}}</span>, <br>
-        <span class="span">email:</span>
-        <span *ngIf="isUpdate" class="changeForInput">{{user.email}}</span>
+        <span class="span">
+          name:
+        </span>
+        <input *ngIf="!isUpdate" [(ngModel)]="user.name" type="text" name="name">
+        <span *ngIf="isUpdate" class="changeForInput" contenteditable="true">
+           {{user.name}}
+        </span>,
+        <br>
+        <span class="span">
+          email:
+        </span>
+        <input *ngIf="!isUpdate" [(ngModel)]="user.email" type="text" name="email" >
+        <span *ngIf="isUpdate" class="changeForInput">
+           {{user.email}}
+        </span>
+        <input style="display: none"  [(ngModel)]="user._id" type="text" name="id">
         <button
           class="update"
           *ngIf="isUpdate"
@@ -26,11 +38,16 @@
           Change
         </button>
 
-
+        <button
+          class="update"
+          *ngIf="!isUpdate"
+          (click)="update(user)">
+          Send
+        </button>
 
         <button class="delete" (click)="delete(user._id)">x</button>
       </p>
-
+      </form>
       <!--<form *ngIf="!isUpdate" >
           <input id="name1"  (blur)="changeUserValue(value)" type="text" name="name" [(value)]= user.name>
         <br>
@@ -46,18 +63,18 @@
         </button>
       </form>-->
 
-      <form *ngIf="!isUpdate" #form='ngForm'>
-      <input [(ngModel)]="formObj.name" type="text" name="name" placeholder= "{{user.name}}">
+      <!--<form *ngIf="!isUpdate" #form='ngForm'>
+      <input [(ngModel)]="user.name" type="text" name="name">
         <br>
-        <input [(ngModel)]="formObj.email" type="text" name="email" placeholder= "{{user.email}}" >
+        <input [(ngModel)]="user.email" type="text" name="email" >
         <br>
-        <input  [(ngModel)]="formObj.id" type="text" name="id" placeholder= "{{user._id}}">
+        <input  [(ngModel)]="user._id" type="text" name="id">
         <br>
         <button
-          (click)="update(formObj)">
+          (click)="update(user)">
           Send
         </button>
-      </form>
+      </form>-->
 
 
     </div>
