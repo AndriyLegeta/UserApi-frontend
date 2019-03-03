@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { WizzardRoutingModule } from './wizzard-routing.module';
-import { WizzardPageComponent } from './wizzard-page/wizzard-page.component';
+import { LoadloginRoutingModule } from './loadlogin-routing.module';
+import { LoadloginPageComponent } from './loadlogin-page/loadlogin-page.component';
 
 import {LoginComponent} from '../login/login.component';
 import {FormsModule} from "@angular/forms";
@@ -13,10 +13,10 @@ import {JsonService} from "../../services/json.service";
 
 import {UsersComponent} from '../users/users.component';
 @NgModule({
-  declarations: [WizzardPageComponent, LoginComponent, UsersComponent],
+  declarations: [LoadloginPageComponent, LoginComponent, UsersComponent],
   imports: [
     CommonModule,
-    WizzardRoutingModule,
+    LoadloginRoutingModule,
     FormsModule,
     HttpClientModule,
 
@@ -26,4 +26,4 @@ import {UsersComponent} from '../users/users.component';
     JsonService
   ]
 })
-export class WizzardModule { }
+export class LoadloginModule { }

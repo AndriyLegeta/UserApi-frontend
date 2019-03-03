@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {WizzardPageComponent} from "./wizzard-page/wizzard-page.component";
+import {LoadloginPageComponent} from "./loadlogin-page/loadlogin-page.component";
 
 import {UsersComponent} from '../users/users.component';
 const routes: Routes = [
-  {path:'', component: WizzardPageComponent},
+  {path:'', component: LoadloginPageComponent},
   {path:'users', component: UsersComponent},
 ];
 
@@ -12,4 +12,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class WizzardRoutingModule { }
+export class LoadloginRoutingModule { }

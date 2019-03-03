@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {User} from "../../models/User";
 import {JsonService} from "../../services/json.service";
 import {IsloginService} from "../../services/islogin.service";
 
@@ -14,13 +13,9 @@ export class LoginComponent implements OnInit {
   user = {};
   token;
   logined;
-  /*localStorageToken;*/
   constructor(private http: JsonService, private isLoginService: IsloginService) { }
 
   ngOnInit() {
-/*  if(localStorage.getItem('token')){
-      this.localStorageToken = localStorage.getItem('token');
-    }*/
   }
 
 
@@ -40,8 +35,4 @@ export class LoginComponent implements OnInit {
     this.isLoginService.logout();
   }
 
-
-  changeLogin(){
-    this.isLogin = !this.isLogin;
-  };
 }

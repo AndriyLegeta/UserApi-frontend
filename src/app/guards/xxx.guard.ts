@@ -10,6 +10,5 @@ export class XxxGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     return confirm('Ви впевнені що хочете перейти');
-    // return false  - непропустить, return true - пропустить
   }
 }
