@@ -6,7 +6,7 @@ import {User} from '../models/User';
 import {Observable} from 'rxjs';
 
 
-/*Cервіс має функцію яка відправить запит*/
+
 
 @Injectable({ // @Injectable - ваш сервіс може викоритовувати інші сервіси
   providedIn: 'root' // якщо записуємо providedIn: 'root' то вже не треба писати в  app.module -  providers: [],
