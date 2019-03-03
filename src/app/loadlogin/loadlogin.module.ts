@@ -7,8 +7,8 @@ import { LoadloginPageComponent } from './loadlogin-page/loadlogin-page.componen
 import {LoginComponent} from '../login/login.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {IsloginService} from "../../services/islogin.service";
-import {JsonService} from "../../services/json.service";
+import {IsloginService} from "../services/islogin.service";
+import {JsonService} from "../services/json.service";
 
 
 import {UsersComponent} from '../users/users.component';

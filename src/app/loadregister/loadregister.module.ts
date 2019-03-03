@@ -8,8 +8,8 @@ import {RegisterComponent} from '../register/register.component';
 
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {IsloginService} from "../../services/islogin.service";
-import {JsonService} from "../../services/json.service";
+import {IsloginService} from "../services/islogin.service";
+import {JsonService} from "../services/json.service";
 @NgModule({
   declarations: [LoadregisterPageComponent, LoadregisterListComponent, RegisterComponent,],
   imports: [

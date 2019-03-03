@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {JsonService} from "../../services/json.service";
-import {IsloginService} from "../../services/islogin.service";
+import {JsonService} from "../services/json.service";
+import {IsloginService} from "../services/islogin.service";
 
 
 @Component({

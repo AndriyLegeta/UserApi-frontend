@@ -10,8 +10,8 @@ import {AppComponent} from './app.component';
 /*import {RegisterComponent} from './register/register.component';*/
 /*import {UsersComponent} from './users/users.component';*/
 
-import {IsloginService} from "../services/islogin.service";
-import {JsonService} from "../services/json.service";
+import {IsloginService} from "./services/islogin.service";
+import {JsonService} from "./services/json.service";
 
 import { AppRoutingModule } from './app-routing.module';
 import {MainRoutingModule} from "./main-routing.module";
