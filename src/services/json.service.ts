@@ -8,20 +8,20 @@ import {Observable} from 'rxjs';
 
 
 
-@Injectable({ // @Injectable - ваш сервіс може викоритовувати інші сервіси
-  providedIn: 'root' // якщо записуємо providedIn: 'root' то вже не треба писати в  app.module -  providers: [],
+@Injectable({ 
+  providedIn: 'root' 
 })
 export class JsonService {
 
 
-  // добавляємо токен в хедер authorization
+
   headers = new HttpHeaders()
     .set('authorization', localStorage.getItem('token'));
 
-  constructor(private  http: HttpClient) { }  //ангулар в себе в контейнері пошукає обєкт http і передасть його
+  constructor(private  http: HttpClient) { }  
 
-  /*Observable - обєкт в нього приходять дані і він може розсилати їх своїм підписникам*/
-  getUsers(){  // getTodos() верне Observable класу <User>
+ 
+  getUsers(){  
     return this.http.get(`${Hosts.API_HOST}`,{headers: this.headers});
   }
   getUserById(id): Observable<User>{
@@ -43,4 +43,4 @@ export class JsonService {
     return this.http.post<User>(`${Hosts.API_HOST}/login`, body);
   }
 }
-// якщо щось передати (put, post) то get(this.url, body) , this.http.get(this.url) - поверне обєкт Observable на який можна підписатися
+
